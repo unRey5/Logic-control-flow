@@ -29,7 +29,7 @@ if (x <= y) {
 
 
 
-const d = new Date(12, 25, 2023, 13, 0, 15);
+const d = new Date(12, 25, 2023, 21, 0, 15);
 
 console.log(d);
 
@@ -44,4 +44,34 @@ if (hour < 12) {
 }
 else {
     console.log(`Having a wonderful rest king ?`);
+}
+
+
+//Nested Ifs
+
+if (hour < 12) {
+    console.log(`Good morning boss Daniel!!!`);
+
+    if (hour === 6) {
+        console.log('Wake and Pray');
+    }
+} else if (hour <= 12) {
+    console.log(`Good afternood sir!!!`);
+}
+else {
+    console.log(`Having a wonderful rest king ?`);
+
+    if (hour >= 20) {
+        console.log('zzzzzzzzz');
+    }
+
+}
+
+
+if (hour <= 7 && hour < 15) {
+    console.log('its Work time');
+}
+
+if (hour >= 3 || hour < 5) {
+    console.log('You should be coding');
 }
