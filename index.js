@@ -29,9 +29,7 @@ if (x <= y) {
 
 
 
-const d = new Date(12, 25, 2023, 21, 0, 15);
-
-console.log(d);
+const d = new Date(12, 12, 2023, 8, 0, 0);
 
 const hour = d.getHours();
 
@@ -67,6 +65,7 @@ else {
 
 }
 
+//having multiple conditions in a single if statemnent
 
 if (hour <= 7 && hour < 15) {
     console.log('its Work time');
@@ -74,4 +73,39 @@ if (hour <= 7 && hour < 15) {
 
 if (hour >= 3 || hour < 5) {
     console.log('You should be coding');
+}
+
+//switches
+
+const da = new Date(2023, 2, 10, 8, 0, 0);
+
+const month = da.getMonth();
+
+console.log(month);
+
+switch (month) {
+    case 1:
+        console.log('It is January');
+        break;
+    case 2:
+        console.log('its february');
+        break;
+    case 3:
+        console.log('not jan or feb');
+        break;
+    default:
+        console.log('Closed today');
+}
+
+
+switch (true) {
+    case hour < 12:
+        console.log('Good morning champ');
+        break;
+    case hour > 12:
+        console.log('Good afternoon champ');
+        break;
+    
+    default:
+        console.log('championnnnnnn');
 }
