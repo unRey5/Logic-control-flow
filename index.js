@@ -123,61 +123,30 @@ switch (true) {
 // calculator(5, 2, '/') // returns 2.5
 // calculator(5, 2, '%') // returns an error message
 
-function calculator(num1, num2, operator) {
-    let result;
-
-    if (operator === '+') {
-        result = num1 + num2;
-        
-    } else if (operator === '-') {
-        result = num1 - num2;
-        
-    } else if (operator === '*') {
-        result = num1 * num2;
-        
-    } else if (operator === '/') {
-            result = num1 / num2;
-        }
-        
-    else {
-        console.log('Enter valid operator');
-    }
-
-    return result;
-
-}
-
-console.log(calculator(5,2,'+'));
-console.log(calculator(5,2,'-'));
-console.log(calculator(5,2,'*'));
-console.log(calculator(5,2,'/'));
-console.log(calculator(5,2,'>'));
+//Using if statements:
 
 // function calculator(num1, num2, operator) {
 //     let result;
-//     switch (true) {
-//         case operator === '+':
-//             result = num1 + num2;
-//             break;
+
+//     if (operator === '+') {
+//         result = num1 + num2;
         
-//         case operator === '-':
-//             result = num1 - num2;
-//             break;
+//     } else if (operator === '-') {
+//         result = num1 - num2;
         
-//         case operator === '*':
-//             result = num1 * num2;
-//             break;
+//     } else if (operator === '*') {
+//         result = num1 * num2;
         
-//         case operator === '/':
+//     } else if (operator === '/') {
 //             result = num1 / num2;
-//             break;
-    
-//         default:
-//             result = 'Error: enter valid operator';
-//             break;
+//         }
+        
+//     else {
+//         console.log('Enter valid operator');
 //     }
 
 //     return result;
+
 // }
 
 // console.log(calculator(5,2,'+'));
@@ -185,3 +154,96 @@ console.log(calculator(5,2,'>'));
 // console.log(calculator(5,2,'*'));
 // console.log(calculator(5,2,'/'));
 // console.log(calculator(5,2,'>'));
+
+//Using switch statements
+
+function calculator(num1, num2, operator) {
+    let result;
+    switch (true) {
+        case operator === '+':
+            result = num1 + num2;
+            break;
+        
+        case operator === '-':
+            result = num1 - num2;
+            break;
+        
+        case operator === '*':
+            result = num1 * num2;
+            break;
+        
+        case operator === '/':
+            result = num1 / num2;
+            break;
+    
+        default:
+            result = 'Error: enter valid operator';
+            break;
+    }
+
+    return result;
+}
+
+console.log(calculator(5,2,'+'));
+console.log(calculator(5,2,'-'));
+console.log(calculator(5,2,'*'));
+console.log(calculator(5,2,'/'));
+console.log(calculator(5, 2, '>'));
+
+//Logical Operators
+
+console.log(10 > 20 && 30 > 15 && 40 < 100);
+
+console.log(10 > 20 || 10 > 100 || 100 > 500);
+
+//&& - will return the first falsy value or the last value
+
+let a;
+
+a = 10 && 20;
+
+console.log(a); //gives the last value because no falsy value in it.
+
+a = 10 && 0 && 100;
+
+console.log(a); //this time the result is a falsy value not the last.
+
+
+const post = ['post one', 'post two'];
+
+post.length > 0 && console.log(post[0]);
+
+//if you are trying to get an item from an array and you dont want to have the result be undefined incase the item you are trying to get from the array is absent then you use the logical statement above to filter it.
+
+//That will provide the item from the array if it is in the array, or not do anything if the item is not there. it is very commonly used in react.
+
+
+// || - will return the first truthy value or the last value
+
+let b;
+
+b = 10 || 20;
+b = 20 || 0 || undefined;
+b = 0 || undefined || '' || 0;
+
+console.log(b);
+
+// ?? - returns the right side if the left side is null or undefined.
+
+let c;
+
+c = 10 ?? 20;
+c = null ?? 20;
+c = undefined ?? 0;
+c = '' ?? 10;
+
+console.log(c);
+
+//LOGICAL ASSIGNMENT
+
+// ||= - assigns the right side value only if the left side is falsy.
+
+// &&= - assigns the right side value only if the left side is truthy.
+
+// ??= - assigns the right side value only if the left is null or undefined.
+
