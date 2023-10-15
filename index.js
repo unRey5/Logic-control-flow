@@ -243,7 +243,46 @@ console.log(c);
 
 // ||= - assigns the right side value only if the left side is falsy.
 
+let e;
+
+e = 0;
+
+e ||= 10;
+
+console.log(e);
+
+
 // &&= - assigns the right side value only if the left side is truthy.
 
+let f;
+
+f = 10;
+
+f &&= 20;
+
+console.log(f);
+
 // ??= - assigns the right side value only if the left is null or undefined.
+
+let g;
+
+g = null;
+
+g ??= 50;
+
+console.log(g);
+
+
+// TERNARY OPERATOR
+
+const age = 10;
+
+if (age >= 18) {
+    console.log('You can vote');
+} else {
+    console.log('Not eligible to vote yet!');
+}
+
+age >= 18 ? console.log('you can vote') : console.log('you cannot vote');
+
 
