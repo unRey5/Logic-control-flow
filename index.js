@@ -285,4 +285,23 @@ if (age >= 18) {
 
 age >= 18 ? console.log('you can vote') : console.log('you cannot vote');
 
+//assigning conditional value to a variable
 
+const enfranchised = age >= 18 ? 'You can vote now sir' : 'Please wait till you are 18 years or older to be enfranchised';
+
+console.log(enfranchised);
+
+
+const auth = false;
+
+// if (auth) {
+//     alert('Welcome to your dashboard');
+//     redirect = '/dashboard';
+// } else {
+//     alert('Login failed');
+//     redirect = '/login';
+// }
+
+const redirect = auth ? (alert('Welcome'), '/dashboard') : (alert('failed'), '/login');
+
+console.log(redirect);
